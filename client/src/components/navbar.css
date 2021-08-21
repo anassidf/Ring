@@ -1,0 +1,46 @@
+.navbar {
+	background-color: #f73859;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 60px;
+}
+
+.navbar > p {
+	cursor: pointer;
+}
+
+.avatar:hover {
+	cursor: pointer;
+}
+
+.userAvatar {
+	position: absolute !important;
+
+	right: 14%;
+}
+
+.link {
+	text-decoration: none;
+	color: black;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+.link:nth-child(1) {
+	margin-left: 90px;
+}
+.link:last-child {
+	margin-right: 90px;
+}
+
+.link:hover {
+	color: black !important;
+	opacity: 0.5;
+}
+.ringLogo {
+	width: 35px;
+	height: 35px;
+	margin-left: 19px;
+	cursor: pointer;
+}

@@ -1,0 +1,186 @@
+.discoverContainer {
+	height: 100%;
+	width: 100%;
+	background-color: #f1d18a;
+}
+
+.usersContainer {
+	width: 38vw;
+	height: 60vh;
+	background-color: rgb(255, 255, 255);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 7px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.search {
+	position: absolute;
+	top: 20%;
+	width: 50%;
+	padding-top: 5px;
+	padding-left: 20px;
+	border: none;
+	background: #ffffff;
+	border-radius: 19px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	outline: none;
+	color: rgb(20, 20, 20);
+	font-size: 23px;
+}
+/* .search::placeholder {
+	position: absolute;
+	left: 20px;
+} */
+
+.notAuthenticated {
+	color: red;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+}
+
+.discoverBodyContainer {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.usersImage {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+.userRow {
+	display: flex;
+	margin-bottom: 20px;
+
+	width: 100%;
+	margin-left: 20px;
+	padding: 15px;
+	transition: all 0.3s;
+}
+
+.userRow:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.356);
+}
+
+.videoCall {
+	width: 20px;
+	height: 20px;
+	transition: all 0.3s;
+	border-radius: 50%;
+}
+
+.chatLogo {
+	width: 20px;
+	height: 20px;
+	margin-left: 8px;
+	transition: all 0.3s;
+}
+.videoCall:hover {
+	opacity: 0.7;
+}
+.chatLogo:hover {
+	opacity: 0.7;
+}
+
+.callType {
+	position: absolute;
+	right: 15px;
+}
+
+.chattig {
+	width: 40%;
+	height: 100%;
+	background-color: #ededed;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	position: fixed;
+	top: 0;
+	right: -100%;
+	z-index: 10;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	transition: all 0.3s;
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+
+.close {
+	margin: 10px;
+}
+.close:hover {
+	cursor: pointer;
+}
+
+.messageFeild {
+	flex: 9;
+	display: flex;
+	flex-direction: column;
+}
+.chatForm {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.inputMessage {
+	margin-right: 5px;
+	padding: 2px 80px;
+	border-radius: 2px;
+	border: none;
+	outline: none;
+}
+.sendMessageButton {
+	padding: 2px 10px;
+	background-color: transparent;
+	cursor: pointer;
+	border: 0.2px solid black;
+}
+
+.sendMessageButton:hover {
+	background-color: black;
+	color: white;
+}
+
+.features {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: 80px;
+	bottom: 70px;
+}
+
+.feature {
+	margin-bottom: 13px;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: rgb(240, 243, 82);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+
+.feature > img {
+	width: 24px;
+	height: 24px;
+}
