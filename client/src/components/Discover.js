@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from './Navbar';
 import ClearIcon from '@material-ui/icons/Clear';
-import { element } from 'prop-types';
+
 import video from '../assets/video.svg';
 import chat from '../assets/chat.svg';
 import { io } from 'socket.io-client';
@@ -24,15 +24,6 @@ const Discover = () => {
 
 	const history = useHistory();
 
-	const startChat = () => {
-		// this part not working
-		let chatBox = document.getElementById('chat');
-		chatBox.style.right = '0';
-	};
-
-	const closeChat = () => {
-		document.getElementById('chat').style.right = '-100%';
-	};
 	useEffect(() => {
 		let s = io('http://localhost:4000');
 		setSocket(s);
@@ -89,6 +80,15 @@ const Discover = () => {
 		});
 	}, [socket]);
 
+	const startChat = () => {
+		// this part not working
+		document.getElementById('chat').style.right = '0';
+	};
+
+	const closeChat = () => {
+		document.getElementById('chat').style.right = '-100%';
+	};
+
 	const isntFunction = () => {
 		alert('this feature isnt done yet >_<');
 	};
@@ -142,7 +142,7 @@ const Discover = () => {
 												<img
 													src={chat}
 													className='chatLogo'
-													onClick={isntFunction}
+													onClick={startChat}
 												/>
 											</div>
 										</div>
@@ -166,27 +166,28 @@ const Discover = () => {
 					</div>
 
 					{/* chat box  */}
-					<div id='chat' className='chattig'>
-						<ClearIcon className='close' onClick={closeChat} />
-						<div className='messageFeild'></div>
-						<div className='chatForm'>
-							<form onSubmit={handleSubmit(submitChat)}>
-								<input
-									{...register('message')}
-									className='inputMessage'
-									type='text'
-									placeholder='Enter Youre Message'
-								/>
-								<button className='sendMessageButton'>Send</button>
-							</form>
-						</div>
-					</div>
 				</>
 			) : (
 				<div className='notAuthenticated'>
 					<div>you are not authenticated please go back</div>
 				</div>
 			)}
+
+			<div id='chat' className='chattig'>
+				<ClearIcon className='close' onClick={closeChat} />
+				<div className='messageFeild'></div>
+				<div className='chatForm'>
+					<form onSubmit={handleSubmit(submitChat)}>
+						<input
+							{...register('message')}
+							className='inputMessage'
+							type='text'
+							placeholder='Enter Youre Message'
+						/>
+						<button className='sendMessageButton'>Send</button>
+					</form>
+				</div>
+			</div>
 		</div>
 	);
 };

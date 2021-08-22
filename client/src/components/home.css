@@ -3,7 +3,7 @@
 	background-color: #f1d18a;
 }
 
-h1 {
+.layout > h1 {
 	color: white;
 	padding-left: 90px;
 	padding-top: 40px;
@@ -17,14 +17,14 @@ h1 {
 	margin: auto;
 	border-radius: 30px;
 	box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .google {
 	background-color: #ef3939;
 	width: 300px;
-}
-.facebook {
-	background-color: #4668e0;
 }
 button {
 	border: none;
@@ -49,9 +49,44 @@ button > img {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	position: relative;
 }
 .centerItems > h5 {
 	position: absolute;
 	bottom: 10px;
+}
+
+@media (max-width: 1068px) {
+	.loginContainer {
+		width: 40vw;
+	}
+
+	.centerItems > h5 {
+		font-size: 15px;
+	}
+
+	.layout > h1 {
+		font-size: 25px;
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+@media (max-width: 1011px) {
+	.loginContainer {
+		width: 60vw;
+	}
+}
+@media (max-width: 512px) {
+	.loginContainer {
+		width: 70vw;
+	}
+	.google {
+		width: 200px;
+		font-size: 8px;
+	}
+	.google > img {
+		width: 20px;
+		height: 20px;
+		margin-right: 5px;
+	}
 }
