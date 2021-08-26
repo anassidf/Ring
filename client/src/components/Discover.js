@@ -151,12 +151,16 @@ const Discover = () => {
 						</div>
 						<div className='features'>
 							<div className='globalChat feature'>
-								<img src={chat} className='chatLogo' onClick={isntFunction} />
+								<img
+									src={chat}
+									className='chatLogoGlobal'
+									onClick={isntFunction}
+								/>
 							</div>
 							<div className='docs feature'>
 								<img
 									src={document}
-									className='chatLogo'
+									className='chatLogoGlobal'
 									onClick={() => {
 										history.push('/documents');
 									}}

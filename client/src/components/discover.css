@@ -162,7 +162,7 @@
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	right: 80px;
+	right: 30px;
 	bottom: 70px;
 }
 
@@ -183,4 +183,87 @@
 .feature > img {
 	width: 24px;
 	height: 24px;
+}
+
+@media (max-width: 690px) {
+	.search {
+		font-size: 19px;
+	}
+}
+
+@media (max-width: 406px) {
+	.search {
+		font-size: 15px;
+		width: 200px;
+	}
+}
+
+@media (max-width: 920px) {
+	.usersContainer {
+		width: 58vw;
+	}
+
+	.feature {
+		width: 50px;
+		height: 50px;
+	}
+
+	.chatLogo {
+		width: 15px;
+		height: 15px;
+	}
+	.videoCall {
+		width: 15px;
+		height: 15px;
+	}
+
+	.feature > img {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+@media (max-width: 570px) {
+	.usersContainer {
+		width: 78vw;
+	}
+	.feature {
+		width: 30px;
+		height: 30px;
+	}
+
+	.chatLogo {
+		display: none;
+	}
+	.videoCall {
+		display: none;
+	}
+
+	.feature > img {
+		width: 15px;
+		height: 15px;
+	}
+
+	.features {
+		right: 20px;
+	}
+}
+
+@media (max-width: 460px) {
+	.features {
+		right: 60px;
+		bottom: 80px;
+	}
+}
+
+@media (max-width: 320px) {
+	.features {
+		right: 50px;
+	}
+}
+
+@media (max-width: 300px) {
+	.features {
+		right: 60px;
+	}
 }

@@ -7,6 +7,8 @@ import { withStyles } from '@material-ui/core/styles';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import Ring from '../assets/ring.svg';
+import MenuIcon from '@material-ui/icons/Menu';
+import ClearIcon from '@material-ui/icons/Clear';
 //! reuse for material ui icon
 
 const StyledBadge = withStyles((theme) => ({
@@ -52,6 +54,18 @@ const Navbar = ({ user }) => {
 			});
 	};
 
+	const showMenu = () => {
+		let menu = document.getElementById('menuWindow');
+		menu.style.display = 'flex';
+		menu.style.right = '0';
+	};
+	const closeMenu = () => {
+		let menu = document.getElementById('menuWindow');
+
+		menu.style.right = '-100%';
+		menu.style.display = 'none';
+	};
+
 	return (
 		<div className='navbarContainer'>
 			<div className='navbar'>
@@ -74,6 +88,18 @@ const Navbar = ({ user }) => {
 					<Avatar className='avatar' alt='user' src={user.picture} />
 				</StyledBadge>
 				<div className='link'>{user.username}</div>
+				<MenuIcon className='menu' onClick={showMenu} />
+				{/* menu */}
+				<div id='menuWindow'>
+					<Link className='linkMenu' onClick={logout} to='/'>
+						Logout
+					</Link>
+					<div className='userMenu'>
+						<Avatar className='avatarMenu' alt='user' src={user.picture} />
+						<p className='linkMenu'>{user.username}</p>
+					</div>
+					<ClearIcon className='closeMenu' onClick={closeMenu} />
+				</div>
 			</div>
 		</div>
 	);
