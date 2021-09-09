@@ -142,7 +142,7 @@ const Discover = () => {
 												<img
 													src={chat}
 													className='chatLogo'
-													onClick={startChat}
+													onClick={isntFunction}
 												/>
 											</div>
 										</div>
